@@ -15,7 +15,7 @@ var arrayGameWord;
 var wordLength;
 var displayArray=[];
 //create a list of words to choose from
-var words = ['monica','billy','javascript','pixel','thumper','ryan'];
+var words = ['jack','ripper','dahmer','gacy','zodiac','bundy','cullen'];
 
   function gameSetUp(){
     displayStr = " ";
@@ -53,6 +53,7 @@ function imageChange(wordStr){
   document.getElementById("hangmanImage").innerHTML = imageURL;
 }
 gameSetUp();
+imageChange(lossCtr)
  //The game will go on for 6 missed letters, then you die
   //---------------------------------------------
   //check for keypress and if it's alpha only, proceed after assigning it to the userGuess
@@ -113,7 +114,7 @@ document.onkeyup = function(event) {
     // document.getElementById("usedDisp").innerHTML = "FOREVER";
     imageChange(lossCtr)
     document.body.style.backgroundImage = "url('images/lossBackground.jpg')";
-    alert("You LOOSE");
+   // alert("You LOOSE");
     gameSetUp();
   }
   gameWon=displayArray.indexOf("_ ");
@@ -123,7 +124,7 @@ document.onkeyup = function(event) {
     // document.getElementById("usedDisp").innerHTML = "Live to See Another Day!";
     imageChange("won")
     document.body.style.backgroundImage = "url('images/winningBackground.jpg')";
-    alert("You WIN");
+    //alert("You WIN");
     gameSetUp();
   }
 } //end function(event)
